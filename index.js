@@ -86,12 +86,12 @@ class Like {
                 like.classList.remove('liked');
                 like.classList.add('not_liked');
 
-                likeNumber.innerHTML = '1'
+                likeNumber.innerHTML = '0'
             } else {
                 like.classList.add('liked');
                 like.classList.remove('not_liked');
 
-                likeNumber.innerHTML = '0'
+                likeNumber.innerHTML = '1'
             }
         })
 
