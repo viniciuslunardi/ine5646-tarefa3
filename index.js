@@ -66,8 +66,6 @@ class Post {
     }
 }
 
-let likeCount = 0;
-
 class Like {
     constructor() {
         const like = document.createElement('BUTTON');
@@ -80,7 +78,7 @@ class Like {
         like.classList.add('not_liked');
 
         const likeNumber = document.createElement('SPAN');
-        likeNumber.innerHTML = likeCount.toString();
+        likeNumber.innerHTML = '0';
         likeNumber.className = 'like-count';
 
         like.addEventListener('click', () => {
@@ -88,12 +86,12 @@ class Like {
                 like.classList.remove('liked');
                 like.classList.add('not_liked');
 
-                likeNumber.innerHTML = (likeCount -= 1).toString();
+                likeNumber.innerHTML = '1'
             } else {
                 like.classList.add('liked');
                 like.classList.remove('not_liked');
 
-                likeNumber.innerHTML = (likeCount += 1).toString();
+                likeNumber.innerHTML = '0'
             }
         })
 
